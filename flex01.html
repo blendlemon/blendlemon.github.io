@@ -4,11 +4,24 @@
 	<head>
 		<title>Persona 3</title>
 		<style>
+			@font-face{
+				font-family: 'BMA';
+				src: url('bm_space/BMSPA___.TTF') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+			}
+
 			body{
+				font-family: "BMA", sans-serif;
 				display:flex;
 				flex-direction: column;
 				padding: 0px;
 				margin: 0px;
+				background-color: #303030;
+			}
+
+			body *{
+				background-color: #303030;
 			}
 			
 			/*---------------------- HEADER --------------------*/
@@ -18,8 +31,7 @@
 				justify-content: center;
 				align-items: center;
 				color:white;
-				background-color: rgb(0,23,24);
-				font-family:'BM space';
+				background-color:#1269cc;
 				font-size:200%;
 				min-height: 100px;
 			}
@@ -55,6 +67,7 @@
 			#presentacion{
 				display: flex;
 				flex-direction: row;
+				
 			}
 			#foto{
 				color:white;
@@ -62,13 +75,18 @@
 				background-image: url("persona3.jpeg");
 				background-size: cover;
 				background-repeat:no-repeat;
+				background-position:center;
 				width: 50%;
+				
 			}
 			#text{
-				text-align: justify;
-				padding:10px;
+				text-align: center;
+				line-height: 1.5;
+				padding:1%;
 				width:50%;
-				background-color:lightblue;
+				background-color:#303030;
+				opacity: 0.5;
+				color:white;
 			}
 			
 			/*------------------ PORTAFOLIO: fotos ----------------------*/
@@ -140,18 +158,16 @@
 				<div id="foto">Persona 3
 				</div>
 				<div id="text">
-					<p>
 						Persona 3 Reload[c] is a 2024 role-playing video game by Atlus. Reload is a remake of Persona 3 (2006), the fourth main installment of the Persona series, itself a part of the larger Megami Tensei franchise. As with the original game, the protagonist is a high school student returning to his home city a decade after his parents were killed in a fatal car crash. He soon gains the potential to summon a Persona–the physical manifestation of his inner spirit, and joins the Specialized Extracurricular Execution Squad (S.E.E.S.), a group of like-minded Persona users. Together, they are tasked with defeating Shadows and uncovering the mystery of the Dark Hour.
 
 Persona 3 Reload was released for PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S. The game received positive reviews from critics and sold a million copies within its first week of release, making it Atlus' fastest-selling game. A remake of Persona 3 was often requested by fans following the series' push towards global popularity thanks to the success of Persona 5 (2016), as was officially acknowledged by Atlus themselves. Reload began development in 2019 and was announced in June 2023.
 
 Reload remakes the main story of Persona 3, with various graphical and functional updates that bring the game in parity with the series' later installments. Shigenori Soejima oversaw overhauled art direction by Tomohiro Kumagai and updated character designs by Azusa Shimada. The music was written primarily by Atsushi Kitajoh, with additional arrangements by original composer Shoji Meguro, and vocal tracks performed by Azumi Takahashi and Lotus Juice. 
-					</p>
 				</div>
 			</section>
 			<section id="portafolio">
 				<div class="fotos">
-					<img src="persona3.jpeg" width="100px" height="330px">
+					<img src="persona3.jpeg" width="100px" height="150px" style="align-self:center;">
 					<img src="persona3.jpeg">
 					<img src="persona3.jpeg">
 				</div>
