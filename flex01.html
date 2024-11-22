@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="en">
 	<head>
-		<title>Persona 3</title>
+		<title>Persona 3 Reload</title>
 		<style>
 			@font-face{
 				font-family: 'BMA';
@@ -19,10 +19,6 @@
 				margin: 0px;
 				background-color: #303030;
 			}
-
-			body *{
-				background-color: #303030;
-			}
 			
 			/*---------------------- HEADER --------------------*/
 			
@@ -31,7 +27,7 @@
 				justify-content: center;
 				align-items: center;
 				color:white;
-				background-color:#1269cc;
+				background-color:#303030;
 				font-size:200%;
 				min-height: 100px;
 			}
@@ -49,7 +45,7 @@
 			/*---------------------- NAV y botones --------------------*/
 			nav{
 				min-height: 50px;
-				background-color: grey;
+				background-color: #1269cc;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-around;
@@ -80,7 +76,7 @@
 				
 			}
 			#text{
-				text-align: center;
+				text-align: left;
 				line-height: 1.5;
 				padding:1%;
 				width:50%;
@@ -91,28 +87,47 @@
 			/*------------------ PORTAFOLIO: fotos ----------------------*/
 			#portafolio{
 				display: flex;
-				width: 100%;
+				padding: 2%;
 				flex-direction: row;
 				align-items: center;
+				background-color: #303030;
+				
 			}
 			.fotos{
 				display: flex;
 				width: 100%;
-				max-height: 10vh;
+				height: auto;
+				flex-wrap: wrap;
 				justify-content: space-around;
 			}
-			
+			.fotos img{
+				height: auto;
+				padding: 10px;
+				max-width: 100%;
+				min-width: 300px;
+				width: 20%;
+				object-fit: contain;
+				transition: 300ms;
+			}
 
+			img:hover{
+				transform: scale(1.2);
+			}
 			/*---------------------- CONTACTO --------------------*/
 			form{
 				width:100%;
-				background-color: #BBBBFF;
+				background-color: #6d9ac7;
+				display: flex;
+				flex-direction: row;
 			}
 			.columna_form{
 				border: 1px solid red;	
 			}
 			#form1,#form2{
-				
+				display: flex;
+				flex-direction: column;
+				max-width: 100%;
+				padding: 1%;
 			}
 			#form3{
 				
@@ -146,7 +161,7 @@
 	</head>
 	<body>
 		
-		<header>Persona 3</header>
+		<header>Persona 3 Reload</header>
 		<nav>
 			<div class="boton"><a href="#presentacion">presentación</a></div>
 			<div class="boton"><a href="#portafolio">portafolio</a></div>
@@ -154,7 +169,7 @@
 		</nav>
 		<main>
 			<section id="presentacion">
-				<div id="foto">Persona 3
+				<div id="foto"><p style="background-color:transparent;margin-left:1%;">Persona 3 Reload</p>
 				</div>
 				<div id="text">
 						Persona 3 Reload[c] is a 2024 role-playing video game by Atlus. Reload is a remake of Persona 3 (2006), the fourth main installment of the Persona series, itself a part of the larger Megami Tensei franchise. As with the original game, the protagonist is a high school student returning to his home city a decade after his parents were killed in a fatal car crash. He soon gains the potential to summon a Persona–the physical manifestation of his inner spirit, and joins the Specialized Extracurricular Execution Squad (S.E.E.S.), a group of like-minded Persona users. Together, they are tasked with defeating Shadows and uncovering the mystery of the Dark Hour.
@@ -166,14 +181,24 @@ Reload remakes the main story of Persona 3, with various graphical and functiona
 			</section>
 			<section id="portafolio">
 				<div class="fotos">
-					<img src="persona3.jpeg" style="width:20% ;">
-					<img src="p3r-1-million-copies-sold-art.png" style="width:20%; height: 20%;">
+					<img src="p3r-key-art.png" alt="1">
+					<img src="p3r-1-million-copies-sold-art.png" alt="2">
+					<img src="p3r-key-artwork.png" alt="3">
+					<img src="p3r-promo-illustration.jpg" alt="4">
+					<img src="p3r-special-illustration-by-kazama-raita.jpg" alt="5">
 					
 				</div>
 			</section>
 			<section id="contacto">
 				<form action="#" method="post">
-					<!-- ... -->
+					<div id="form1">
+						<input type="text" name="name" placeholder="name" required>
+						<input type="text" name="address" placeholder="address" required>
+						<input type="email" name="email" placeholder="email" required>
+					</div>
+					<div id="form2">
+						<textarea width="30" heigth="auto"></textarea>
+					</div>
 				</form>
 			</section>
 		</main>
