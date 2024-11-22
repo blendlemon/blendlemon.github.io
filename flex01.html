@@ -116,9 +116,14 @@
 			/*---------------------- CONTACTO --------------------*/
 			form{
 				width:100%;
+				height: auto;
 				background-color: #6d9ac7;
 				display: flex;
 				flex-direction: row;
+				padding:1%;
+				justify-content: space-around;
+				align-items: center;
+				
 			}
 			.columna_form{
 				border: 1px solid red;	
@@ -126,11 +131,18 @@
 			#form1,#form2{
 				display: flex;
 				flex-direction: column;
-				max-width: 100%;
-				padding: 1%;
+				width: 30%;
 			}
 			#form3{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				font-family: 'Times New Roman', Times, serif;
+				text-align: center;
+				width: 30%;
+				object-fit: contain;
 				
+
 			}
 			
 			/*---------------------- FOOTER --------------------*/
@@ -192,12 +204,19 @@ Reload remakes the main story of Persona 3, with various graphical and functiona
 			<section id="contacto">
 				<form action="#" method="post">
 					<div id="form1">
-						<input type="text" name="name" placeholder="name" required>
-						<input type="text" name="address" placeholder="address" required>
-						<input type="email" name="email" placeholder="email" required>
+						<input type="text" name="name" placeholder="name" style="margin-bottom: 5px;" required>
+						<input type="text" name="address" placeholder="address" style="margin-bottom: 5px;" required>
+						<input type="email" name="email" placeholder="email" style="margin-bottom: 5px;" required>
 					</div>
 					<div id="form2">
-						<textarea width="30" heigth="auto"></textarea>
+						<textarea style="height: 100%;" name="message" placeholder="message"></textarea>
+					</div>
+					<div id="form3">
+						Lorem ipsum dolor sit amet, consectetur adipscing elit. Curabitur efficitur nulla ut volutpat fermentum.
+						<div>
+							<input type="checkbox" name="legal" id="legal" required><label for="legal">Acepto este tostón legal bla bla bla</label>
+						</div>
+						<input type="submit">
 					</div>
 				</form>
 			</section>
