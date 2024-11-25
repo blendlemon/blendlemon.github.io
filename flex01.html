@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 	<head>
 		<title>Persona 3 Reload</title>
 		<style>
@@ -115,14 +115,12 @@
 			}
 			/*---------------------- CONTACTO --------------------*/
 			form{
-				width:100%;
-				height: auto;
 				background-color: #6d9ac7;
 				display: flex;
 				flex-direction: row;
 				padding:1%;
 				justify-content: space-around;
-				align-items: center;
+				align-items: stretch;
 				
 			}
 			.columna_form{
@@ -132,6 +130,8 @@
 				display: flex;
 				flex-direction: column;
 				width: 30%;
+				height: auto;
+				justify-content: space-around;
 			}
 			#form3{
 				display: flex;
@@ -140,9 +140,11 @@
 				font-family: 'Times New Roman', Times, serif;
 				text-align: center;
 				width: 30%;
-				object-fit: contain;
-				
+			}
 
+			#form2 textarea{
+				flex:1;
+				width: 100%;
 			}
 			
 			/*---------------------- FOOTER --------------------*/
@@ -204,9 +206,9 @@ Reload remakes the main story of Persona 3, with various graphical and functiona
 			<section id="contacto">
 				<form action="#" method="post">
 					<div id="form1">
-						<input type="text" name="name" placeholder="name" style="margin-bottom: 5px;" required>
-						<input type="text" name="address" placeholder="address" style="margin-bottom: 5px;" required>
-						<input type="email" name="email" placeholder="email" style="margin-bottom: 5px;" required>
+						<input type="text" name="name" placeholder="name"  required>
+						<input type="text" name="address" placeholder="address"  required>
+						<input type="email" name="email" placeholder="email"  required>
 					</div>
 					<div id="form2">
 						<textarea style="height: 100%;" name="message" placeholder="message"></textarea>
@@ -216,7 +218,7 @@ Reload remakes the main story of Persona 3, with various graphical and functiona
 						<div>
 							<input type="checkbox" name="legal" id="legal" required><label for="legal">Acepto este tostón legal bla bla bla</label>
 						</div>
-						<input style="width: 40%; align-self: center;" type="submit">
+						<input style="max-width: 100px; align-self:center; margin-top:10px" type="submit">
 					</div>
 				</form>
 			</section>

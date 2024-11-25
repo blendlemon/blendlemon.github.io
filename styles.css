@@ -27,16 +27,17 @@ nav{
     align-items: center;
     min-height: 50px;
     background-color: #1269cc;
-    font-size: 120%;
+    font-size: 150%;
+   
 }
 .boton{
     color: white;
     margin:5px;
+    text-decoration: none;
 }
 .boton a{
     color:white;
 }
-
 .boton:hover{
     color: #303030;
 }
@@ -74,8 +75,7 @@ nav{
 }
 #portfolio img{
     padding:1%;
-    max-width: 200px;
-    object-fit: contain;
+    max-width: 300px;
     transition: 600ms;
 
 }
