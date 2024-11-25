@@ -1,4 +1,12 @@
+@font-face{
+    font-family: 'BMA';
+    src: url('assets/bm_space/BMSPA___.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
+    font-family: 'BMA',sans-serif;
     background-color: #303030;
     color:white;
     margin:0px;
@@ -49,8 +57,10 @@ nav{
     min-height: 500px;
 }
 #foto{
+    text-shadow: 2px 2px 2px black;
+    padding: 1%;
     display: flex;
-    background-image: url("persona3.jpeg");
+    background-image: url("assets/persona3.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +68,9 @@ nav{
 }
 #texto{
     display: flex;
-    text-align: justify;
+    text-align: center;
+    align-items: center;
+    line-height: 1.2;
     padding: 10px;
     width:50%;
 }
@@ -74,12 +86,71 @@ nav{
 
 }
 #portfolio img{
-    padding:1%;
+    padding:20px;
     max-width: 300px;
     transition: 600ms;
 
 }
 
 img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+/* seccion formulario */
+
+form {
+    background-color: #1269cc;
+    font-family: 'Times New Roman';
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    align-items: strech;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+#form1, #form2{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 200px;
+    max-width: 300px;
+    justify-content: center;
+    padding: 1%;
+}
+
+#form1 > input{
+    margin-bottom: 10px;
+}
+
+#form3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/* pie de pagina */
+
+footer{
+    background-color: #303030;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.copy{
+    margin-left: 10px;
+}
+.social{
+    margin-right: 10px;
+}
+.social img{
+    height: 40px;
 }
