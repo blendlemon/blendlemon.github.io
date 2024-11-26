@@ -9,7 +9,10 @@ body{
     font-family: 'BMA',sans-serif;
     background-color: #303030;
     color:white;
-    margin:0px;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right: 0px;
+    margin-bottom: 3em;
     padding:0px;
     min-width: 500px
 }
@@ -27,6 +30,7 @@ header{
     background-color: #303030;
     font-size:200%;
     height: 100px;
+    
 }
 
 /* nav y botones */
@@ -98,9 +102,10 @@ img:hover{
 }
 
 /* seccion formulario */
-
-form {
+#contacto{
     background-color: #1269cc;
+}
+form {
     font-family: 'Times New Roman';
     display: flex;
     flex-direction: row;
@@ -108,8 +113,8 @@ form {
     min-height: 200px;;
     margin-bottom: 20px;
 }
-
 .columna{  
+   
     display: flex;
     flex-wrap: wrap;
     width: 100%;
