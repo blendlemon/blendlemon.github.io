@@ -103,11 +103,11 @@ img:hover{
     background-color: #1269cc;
 }
 form {
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', sans-serif;
     display: flex;
     flex-direction: row;
     width: 100%;
-    min-height: 200px;;
+    min-height: 200px;
     margin-bottom: 20px;
 }
 .columna{  
