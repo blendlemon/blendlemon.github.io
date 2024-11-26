@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>		
+			html,body {height: 100%; margin: 0;}
+			body{display: flex;justify-content: center;align-items: center;height: 100%;}
+			#resultado{ background-color: red; width:90%; height:100px; display: flex; justify-content: center; align-items: center; margin-bottom:20px; border: 8px solid black; border-radius: 20px; }
+			li{ padding:5px; } 
+			input,select{ margin: 0px; }
+			@font-face { font-family: "Visitors"; src: url(../ttf/visitors.ttf); }
+			h2{ font-family:Visitors; }
+		</style>
+	</head>
+	<body>
+			<!----------------------- ENUNCIADO EJERCICIO 3 (3,5 puntos) ------------------------
+			
+			- YA TE DOY LOS ESTILOS. POR TANTO NO TOQUES EL BLOQUE DE ESTILOS <STYLE>
+			  Y NO AÑADAS NUEVO CSS NI USES ATRIBUTO style="". TAMPOCO TOQUES EL JAVASCRIPT.
+			  
+			- DEBES TRABAJAR EXCLUSIVAMENTE EN EL ESPACIO INDICADO: "A PARTIR DE AQUÍ ... HASTA AQUÍ".
+			  
+			- (0,25pt) DEBES CREAR EL FORMULARIO DE LA IMAGEN con destino "examen.html", que envíe por POST
+			           NOTA: No hay labels, ni buttons, ni inputs de tipo submit o reset.
+			  
+			- (0,75pt) COMO PUEDES VER, LOS CAMPOS ESTÁN DENTRO DE UNA LISTA ORDENADA, 
+			           EL TEXTO GRANDE ES UN ENCABEZADO DE NIVEL 2 DENTRO DEL FORM, JUSTO ANTES DE LA LISTA.
+					   DEBE TENER ID: resultado
+			           
+			- (2,5pt) ESTOS SON LOS INPUTS Y SUS CARACTERISTICAS
+			       NOTA: Se indica entre comillas el nombre que deben tener.
+			  
+			  - 1 input de texto "texto", máximo 12 caracteres (OJO! no son pixels) y placeholder
+			  - 1 select "fuente" con opciones y valores:  "Visitors", "Arial Black", "Courier" y "Verdana" (primera por defecto)
+			  - 3 radios "fuenteSubra" con valores 0, 1, 2. La primera, marcada por defecto.
+			  - 2 selector de color "fondoColor" y "fuenteColor". Por defecto, rojo, y negro (hex)
+			  - 3 input numéricos "sombraHoriz","sombraVerti","sombraExten", todos
+				valor mínimo -10, máximo 10, y valor por defecto 0.
+			  - 1 selector de color "sombraColor", valor por defecto el blanco (hex)
+			  - 1 enlace con href="#", que al hacer click en el lanza la función: configurar()
+			  
+			<!------------------------------- TU CÓDIGO, DESDE AQUÍ ------------------------------>
+			<form action="examen.html" method="post">
+				<h2 id="resultado">amistad</h2>
+				<ol type="i">
+					<li>
+						<input name="texto" type="text" maxlength="12" placeholder="Escribe tu mensaje aquí"> y fuente: 
+						<select name="fuente">
+							<option value="Visitors">Visitors</option>
+							<option value="Arial Black">Arial Black</option>
+							<option value="Courier">Courier</option>
+							<option value="Verdana">Verdana</option>
+						</select>
+					</li>
+					<li>
+						Subrayado: 
+						<input type="radio" name="fuenteSubra" value="0" checked>No
+						<input type="radio" name="fuenteSubra" value="1">Abajo
+						<input type="radio" name="fuenteSubra" value="2">Encima
+					</li>
+					<li>
+						Escoge color de fondo, y fuente: 
+						<input name="fondoColor" type="color" value="#ff0000"> 
+						<input name="fuenteColor" type="color" value="#000000">
+					</li>
+					<li>
+						Escoge desp.hor., vert., y extensión de la sombra:<br>
+						<input type="number" name="sombreHoriz" min="-10" max="10" value="0">(px)
+						<input type="number" name="sombraVerti" min="-10" max="10" value="0">(px)
+						<input type="number" name="sombraExten" min="-10" max="10" value="0">(px)
+					</li>
+					<li>
+						Escoge el color de la sombra: 
+						<input type="color" name="sombraColor" value="">
+					</li>
+					<li>
+						<a href="#" onclick="configurar()">MOSTRAR</a>
+					</li>
+				</ol>
+			</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			<!-------------------------- TU CÓDIGO, SÓLO HASTA AQUÍ ----------------------------->
+
+	<script>
+		function configurar(){	
+			fondoC = document.getElementsByName('fondoColor')[0].value;	
+			fTexto = document.getElementsByName('texto')[0].value;
+			fFuent = document.getElementsByName('fuente')[0].value;
+			fSubra = document.getElementsByName('fuenteSubra');
+			for (i = 0; i < fSubra.length; i++) {
+                if (fSubra[i].checked)
+                    fSubra = fSubra[i].value;
+            }
+			fColor = document.getElementsByName('fuenteColor')[0].value;		
+			sDespH = document.getElementsByName('sombraHoriz')[0].value;
+			sDespV = document.getElementsByName('sombraVerti')[0].value;
+			sExten = document.getElementsByName('sombraExten')[0].value;
+			sColor = document.getElementsByName('sombraColor')[0].value;		
+			
+			document.getElementById('resultado').style.backgroundColor = fondoC;
+			
+			resultado = document.getElementById('resultado');
+			resultado.innerText = fTexto.toLowerCase();
+			resultado.style.fontFamily = fFuent;
+			
+			if (fSubra=="1"){ resultado.style.textDecoration = "underline"; }else if (fSubra=="2"){ resultado.style.textDecoration = "overline"; }else{ resultado.style.textDecoration = "none"; } 
+			
+			resultado.style.color = fColor;
+			resultado.style.textShadow = sDespH+'px '+sDespV+'px '+sExten+'px '+sColor;		
+		};
+	</script>
+	</body>
+</html>
