@@ -45,25 +45,27 @@
 			    padding: 0px;
 				margin: 0px;
 				
-				/* ... */
+				display: grid;
+				grid-template-columns: 150px 8fr 1fr;
+				grid-template-rows: 150px repeat(4,auto)
 			}
 			a{
 				text-decoration: none;
 				color:white;
 			}
 			#logo{
-				/* ... */
+				grid-column: 1 1;
 				
 				background-color: red;
 				text-align:center;
 			}
 			header{
-				/* ... */
+				grid-column: 2 / 4;
 				
 				background-color: black;
 			}
 			aside{
-				/* ... */
+				grid-column: 1 / 1;
 				
 				background-color: blue;
 			}
@@ -71,7 +73,7 @@
 				color: white;
 			}
 			main{
-				/* ... */
+				grid-column: 2 / 4;
 				
 				background-color: gray;
 			}
